@@ -1,3 +1,4 @@
+import Homepage from "@/components/Homepage";
 import { createClient } from "contentful";
 
 
@@ -23,7 +24,13 @@ export async function getStaticProps() {
 export default function Home({homepage}) {
   return (
     <div>
-      <h1 className="text-green-500">Hello</h1>
+
+      <div>
+        {homepage.map((main) => 
+          <Homepage key={main.sys.id} main={main} />)}
+      </div>
+
+      
     </div>
   );
 }
