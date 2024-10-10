@@ -5,11 +5,13 @@ import Footer from "./Footer";
 export default function Layout({ children }) {
   return (
     <div>
-      <div>
+      <div className="lg:w-[1100px] mx-auto">
         <Header />
       </div>
-      <div className="relative min-h-screen">
-        <div>{children}</div>
+      <div className="relative min-h-screen bg-dustyPink">
+        <div className="lg:w-[1100px] bg-white mx-auto">
+          {children}
+        </div>
       </div>
       <div className="absolute bottom-0 w-full">
         <Footer />

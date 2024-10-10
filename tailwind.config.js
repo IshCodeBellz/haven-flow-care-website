@@ -8,8 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        syne: ["Syne"]
-      }
+        syne: ["Syne"],
+      },
+      colors: {
+        dustyPink: "#EED3D7",
+      },
     },
   },
   plugins: [],
