@@ -65,11 +65,11 @@ export default function Header() {
           />
         </div>
         <nav className="relative flex justify-between items-center w-full px-4 pt-3 pb-10">
-          {/* Empty div to push the menu to the center */}
+      
           <div className="flex-1"></div>
 
-          {/* Centered menu */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 text-gray-600">
+   
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-gray-600 text-lg">
             <Link href={"/"}>Home |</Link>
             <Link href={"/about"} className="ml-3">
               About Us |
@@ -82,7 +82,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Telephone icon and number */}
+     
           <div className="flex items-center">
             <Image
               src={"/telephone-handle-silhouette.png"}
