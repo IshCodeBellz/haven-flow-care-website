@@ -4,9 +4,10 @@ import Image from 'next/image'
 export default function Homepage({ main }) {
   
   const {homepageHero, heroText, heroSubtitle, homepageTitle, homepageText, homepageTextBottom} = main.fields
-
+console.log(main.fields);
   return (
     <div>
+
       <div>
         <Image
           src={`https:${homepageHero.fields.file.url}`}
@@ -15,6 +16,10 @@ export default function Homepage({ main }) {
           alt="Homepage Hero"
           className=""
         />
+      </div>
+      <p>{homepageText }</p>
+      <div>
+
       </div>
     </div>
   );
