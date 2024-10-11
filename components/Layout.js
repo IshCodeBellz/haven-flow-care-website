@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <div className="lg:w-[1100px] mx-auto w-full ">{children}</div>
       </main>
 
-      <footer className="w-full">
+      <footer className="w-full bg-dustyPink">
         <Footer />
       </footer>
     </div>
