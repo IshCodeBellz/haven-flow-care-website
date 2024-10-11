@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         dustyPink: "#EED3D7",
+        panelBlue: "#5C7E9B",
       },
     },
   },
