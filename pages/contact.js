@@ -44,7 +44,7 @@ export default function Contact() {
             For all general inquiries call 07904 333 304 <br /> Or fill in our
             contact form:
           </p>
-          <div className=" pt-6 pb-12">
+          <div className=" pt-6 pb-16">
             <form onSubmit={handleSubmit}>
               <label htmlFor={id + "-firstName"}>First Name</label>
               <br />
@@ -113,7 +113,7 @@ export default function Contact() {
               />
               <br />
               <br />
-              <button className="rounded bg-panelBlue w-10/12 p-2 text-white">
+              <button className=" text-xl rounded bg-darkBlue w-10/12 p-2 pt-4 pb-4 text-white hover:bg-slate-700 ">
                 Submit
               </button>
             </form>
@@ -130,6 +130,16 @@ export default function Contact() {
             London, N9 8PU <br />
             admin@havenflowcare.co.uk
           </p>
+        </div>
+      </div>
+      <div className="p-8 text-white bg-black w-full h-80 ">
+        <div className="text-5xl p-4">Join Our Team</div>
+        <div className="text-3xl font-semibold p-4">
+          We are always looking for dedicated individuals to join our broad team
+          of home health care staff.
+        </div>
+        <div className="text-s p-4">
+          send you cv to admin@havenflowcare.co.uk
         </div>
       </div>
     </>
