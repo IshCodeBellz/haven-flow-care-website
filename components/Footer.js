@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex">
           <Image
             className=""
-            src="/images/phone-solid.svg"
+            src={"../images/phone-solid.svg"}
             width={48}
             height={48}
             alt="phone"
@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex">
           <Image
             className=""
-            src="/images/envelope-solid.svg"
+            src={"../images/envelope-solid.svg"}
             width={48}
             height={48}
             alt="email"
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="flex">
           <Image
             className=""
-            src="/images/circle-info-solid.svg"
+            src={"../images/circle-info-solid.svg"}
             width={48}
             height={48}
             alt="info"
@@ -39,28 +39,28 @@ export default function Footer() {
         <div className="grid grid-cols-4">
           <Image
             className=""
-            src="/images/instagram-brands-solid.svg"
+            src={"../images/instagram-brands-solid.svg"}
             width={48}
             height={48}
             alt="instagram"
           />
           <Image
             className=""
-            src="/images/linkedin-brands-solid.svg"
+            src={"../images/linkedin-brands-solid.svg"}
             width={48}
             height={48}
             alt="linkedin"
           />
           <Image
             className=""
-            src="/images/square-facebook-brands-solid.svg"
+            src={"../images/square-facebook-brands-solid.svg"}
             width={48}
             height={48}
             alt="facebook"
           />
           <Image
             className=""
-            src="/images/square-x-twitter-brands-solid.svg"
+            src={"../images/square-x-twitter-brands-solid.svg"}
             width={48}
             height={48}
             alt="twitter"
