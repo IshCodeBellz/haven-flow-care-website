@@ -7,7 +7,8 @@ export default function Homepage({ main }) {
   const {homepageHero, heroText, heroSubtitle, homepageTitle, homepageText, homepageTextBottom, servicesHeader,servicesSubtitle} = main.fields
   return (
     <div className="bg-white font-syne text-lightBlack">
-      <div>
+      <div className='relative'>
+        <div className=''>
         <Image
           src={`https:${homepageHero.fields.file.url}`}
           width={1366}
@@ -16,9 +17,19 @@ export default function Homepage({ main }) {
           className=""
         />
       </div>
-      <div className="p-5">
+      <div className='absolute bottom-10 lg:bottom-20 bg-black bg-opacity-15 lg:w-[1000px] py-5 px-3  lg:py-10'>
+         
+            <h1 className='text-white font-bold text-2xl lg:text-5xl font-sans'>{heroText}</h1>
+      <p className='text-white text-xl lg:text-5xl lg:pt-2'>{ heroSubtitle}</p> 
+       
+       
+      </div>
+      </div>
+      
+      
+      <div className="py-6 px-10">
         <div>
-          <h2 className="text-4xl lg:text-6xl">{homepageTitle}</h2>
+          <h2 className="text-3xl lg:text-5xl">{homepageTitle}</h2>
         </div>
 
         <div className="rich-text pt-3">
