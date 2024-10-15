@@ -4,9 +4,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function Homepage({ main }) {
   
-  const {homepageHero, heroText, heroSubtitle, homepageTitle, homepageText, homepageTextBottom, servicesHeader, servicesSubtitle} = main.fields
+  const {homepageHero, heroText, heroSubtitle, homepageTitle, homepageText, homepageTextBottom, servicesHeader,servicesSubtitle} = main.fields
   return (
-    <div>
+    <div className="bg-white font-syne text-lightBlack">
       <div>
         <Image
           src={`https:${homepageHero.fields.file.url}`}
@@ -16,21 +16,23 @@ export default function Homepage({ main }) {
           className=""
         />
       </div>
-      <div>
-        <h2>{homepageTitle}</h2>
-      </div>
+      <div className="p-5">
+        <div>
+          <h2 className="text-4xl lg:text-6xl">{homepageTitle}</h2>
+        </div>
 
-      <div className='rich-text'>
-        {documentToReactComponents(homepageText)}
-      </div>
-      <br />
-      <div>
-        <h2 className='text-3xl'>{servicesHeader}</h2>
-        <p className='text-xl pt-2'>{servicesSubtitle }</p>
-      </div>
-      <br />
-      <div className='rich-text pb-5'>
-        {documentToReactComponents(homepageTextBottom)}
+        <div className="rich-text pt-3">
+          <p>{homepageText}</p> 
+        </div>
+        <br />
+        <div>
+          <h2 className="text-4xl">{servicesHeader}</h2>
+          <p className="text-lg lg:text-xl pt-2">{servicesSubtitle}</p>
+        </div>
+        <br />
+        <div className="rich-text pb-5">
+          <p>{homepageTextBottom}</p>
+        </div>
       </div>
     </div>
   );

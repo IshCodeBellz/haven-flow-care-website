@@ -27,7 +27,7 @@ export default function Footer() {
               alt="email"
             />
           </div>
-          <div>admin@havenflowcare.co.uk</div>
+          <div>admin@havenflowcare.co.uk</div> 
         </div>
         <div className="flex items-center justify-center">
           <div className="pr-2">
