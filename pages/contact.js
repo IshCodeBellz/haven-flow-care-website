@@ -29,24 +29,31 @@ export default function Contact() {
 
   return (
     <>
-      <div className="relative w-full h-36 lg:h-48 bg-panelBlue ">
-        <div className="absolute inset-0 flex items-center justify-center">
+      <div className="relative w-full h-36 lg:h-48 bg-panelBlue">
+        <div className="absolute inset-0 flex items-center justify-center ">
           <div className="text-white text-xl lg:text-4xl px-6 lg:px-20 font-syne">
             If you have any questions or would like more information, our
             advisors will be happy to help.
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 mx-auto lg:grid-cols-2 gap-20 bg-white">
+      <div className="grid grid-cols-1 mx-auto lg:grid-cols-2 gap-20 bg-white font-syne">
         <div className="lg:pl-12 text-sm">
-          <h1 className="text-center lg:text-left pt-10 pb-2 text-black text-5xl">Contact Us</h1>
-          <p className="text-lg pr-24">
-            For all general inquiries call 07904 333 304 <br /> Or fill in our
-            contact form:
+          <h1 className="text-center lg:text-left pt-10 pb-2 text-black text-5xl">
+            Contact Us
+          </h1>
+          <p className="text-lg lg:text-xl  text-center lg:text-left font-sans">
+            For all general inquiries call{" "}
+            <span className="font-bold font-sans">07904 333 304</span>
           </p>
-          <div className=" pt-6 pb-16">
-            <form onSubmit={handleSubmit}>
-              <label htmlFor={id + "-firstName"}>First Name</label>
+          <p className="text-lg text-center lg:text-left">
+            Or fill in our contact form:
+          </p>
+          <div className=" pt-6 pb-16 ">
+            <form onSubmit={handleSubmit} className=" text-center lg:text-left">
+              <label htmlFor={id + "-firstName"} className="!text-left">
+                First Name
+              </label>
               <br />
               <input
                 className="p-2 mt-2 mb-4 border-black-500/50 border-2 focus:outline-none focus:border-sky-500/50  focus:ring-1 w-10/12"
