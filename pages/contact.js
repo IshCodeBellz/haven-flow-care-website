@@ -29,17 +29,17 @@ export default function Contact() {
 
   return (
     <>
-      <div className="relative w-full h-48 bg-panelBlue ">
+      <div className="relative w-full h-36 lg:h-48 bg-panelBlue ">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white text-4xl sm:max-lg:pr-8 sm:max-lg:pl-8 max-sm:text-2xl max-sm:pr-4 max-sm:pl-4">
-            If you have any questions or would like more information, <br /> our
+          <div className="text-white text-lg lg:text-4xl px-6 lg:px-20 font-syne">
+            If you have any questions or would like more information, our
             advisors will be happy to help.
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-20 bg-white">
-        <div className="pl-12 text-sm">
-          <h1 className="pt-10 pb-2 text-black text-5xl">Contact Us</h1>
+      <div className="grid grid-cols-1 mx-auto lg:grid-cols-2 gap-20 bg-white">
+        <div className="lg:pl-12 text-sm">
+          <h1 className="text-center lg:text-left pt-10 pb-2 text-black text-5xl">Contact Us</h1>
           <p className="text-lg pr-24">
             For all general inquiries call 07904 333 304 <br /> Or fill in our
             contact form:
