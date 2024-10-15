@@ -27,7 +27,7 @@ export default function Homepage({ main }) {
       </div>
       
       
-      <div className="py-6 px-10">
+      <div className="py-6 px-5 lg:px-10">
         <div>
           <h2 className="text-3xl lg:text-5xl">{homepageTitle}</h2>
         </div>
