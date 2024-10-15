@@ -39,54 +39,67 @@ export default function Footer() {
               alt="info"
             />
           </div>
-          <div> More info {">"}{">"} </div>
+          <div>
+            {" "}
+            More info {">"}
+            {">"}{" "}
+          </div>
         </div>
         <div className="flex items-center justify-center pt-4 lg:mx-0 lg:pt-0">
           <div className="">
-            <Link href={"https://www.instagram.com/havenflowcare/"} target="_blank">
+            <Link
+              href={"https://www.instagram.com/havenflowcare/"}
+              target="blank"
+            >
               <Image
-              className=""
-              src={"../images/instagram-brands-solid.svg"}
-              width={30}
-              height={30}
-              alt="instagram"
-            />
+                className="w-4 lg:w-7"
+                src={"../images/instagram-brands-solid.svg"}
+                width={30}
+                height={30}
+                alt="instagram"
+              />
             </Link>
           </div>
-          
+
           <div className="pl-3">
-            <Link href={"https://www.linkedin.com/company/haven-flow-care/"} target="_blank">
-             <Image
-              className=""
-              src={"../images/linkedin-brands-solid.svg"}
-              width={30}
-              height={30}
-              alt="linkedin"
-            />
+            <Link
+              href={"https://www.linkedin.com/company/haven-flow-care/"}
+              target="_blank"
+            >
+              <Image
+                className="w-4 lg:w-7"
+                src={"../images/linkedin-brands-solid.svg"}
+                width={30}
+                height={30}
+                alt="linkedin"
+              />
             </Link>
           </div>
           <div className="pl-3">
-            <Link href={"https://www.facebook.com/profile.php?id=61567039918468"} target="_blank">
-               <Image
-              className=""
-              src={"../images/square-facebook-brands-solid.svg"}
-              width={30}
-              height={30}
-              alt="facebook"
-            />
+            <Link
+              href={"https://www.facebook.com/profile.php?id=61567039918468"}
+              target="blank"
+            >
+              <Image
+                className="w-4 lg:w-7"
+                src={"../images/square-facebook-brands-solid.svg"}
+                width={30}
+                height={30}
+                alt="facebook"
+              />
             </Link>
-         </div>
+          </div>
           <div className="pl-3">
-            <Link href={"https://x.com/HavenFlowCare"} target="_blank">
-            <Image
-              className=""
-              src={"../images/square-x-twitter-brands-solid.svg"}
-              width={30}
-              height={30}
-              alt="twitter"
-            />
-          </Link>
-         </div>
+            <Link href={"https://x.com/HavenFlowCare"} target="blank">
+              <Image
+                className="w-4 lg:w-7"
+                src={"../images/square-x-twitter-brands-solid.svg"}
+                width={30}
+                height={30}
+                alt="twitter"
+              />
+            </Link>
+          </div>
         </div>
       </div>
       <div className="text-sm text-center pt-10 pb-4">
