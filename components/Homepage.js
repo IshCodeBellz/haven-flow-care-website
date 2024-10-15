@@ -17,7 +17,7 @@ export default function Homepage({ main }) {
           className=""
         />
       </div>
-      <div className='absolute bottom-10 lg:bottom-20 bg-black bg-opacity-15 lg:w-[1000px] py-5 px-3  lg:py-10'>
+      <div className='absolute bottom-5 lg:bottom-20 bg-black bg-opacity-25 lg:w-[1000px] py-5 px-3  lg:py-10'>
          
             <h1 className='text-white font-bold text-2xl lg:text-5xl font-sans'>{heroText}</h1>
       <p className='text-white text-xl lg:text-5xl lg:pt-2'>{ heroSubtitle}</p> 
