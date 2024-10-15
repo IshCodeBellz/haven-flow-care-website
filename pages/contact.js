@@ -31,7 +31,7 @@ export default function Contact() {
     <>
       <div className="relative w-full h-36 lg:h-48 bg-panelBlue ">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white text-lg lg:text-4xl px-6 lg:px-20 font-syne">
+          <div className="text-white text-xl lg:text-4xl px-6 lg:px-20 font-syne">
             If you have any questions or would like more information, our
             advisors will be happy to help.
           </div>
