@@ -37,19 +37,19 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 mx-auto lg:grid-cols-2 gap-20 bg-white font-syne">
+      <div className="grid grid-cols-1 mx-auto lg:grid-cols-2 gap-20 bg-white font-syne text-lightBlack">
         <div className="lg:pl-12 text-sm">
-          <h1 className="text-center lg:text-left pt-10 pb-2 text-black text-5xl">
+          <h1 className="text-center lg:text-left pt-10 pb-2 text-5xl">
             Contact Us
           </h1>
-          <p className="text-lg lg:text-xl  text-center lg:text-left font-sans">
+          <p className="text-lg lg:text-xl text-center lg:text-left font-sans">
             For all general inquiries call{" "}
             <span className="font-bold font-sans">07904 333 304</span>
           </p>
           <p className="text-lg text-center lg:text-left">
             Or fill in our contact form:
           </p>
-          <div className=" pt-6 pb-16 ">
+          <div className="pt-6 lg:pb-16 ">
             <form onSubmit={handleSubmit} className=" text-center lg:text-left">
               <label htmlFor={id + "-firstName"} className="!text-left">
                 First Name
@@ -97,6 +97,16 @@ export default function Contact() {
                 id={id + "-phonenumber"}
               />
               <br />
+              <label htmlFor={id + "-comments"}>Enquiry</label>
+              <br />
+              <textarea
+                className="p-2 mt-2 mb-4 border-black-500/50 border-2 focus:outline-none focus:border-sky-500/50  focus:ring-1 w-10/12"
+                value={formData.comments}
+                onChange={handleChange}
+                name="comments"
+                id={id + "-comments"}
+              />
+              <br />
               <input
                 className="mt-2 mb-4 indeterminate:bg-gray-300 checked:bg-slate-500"
                 type="checkbox"
@@ -108,16 +118,7 @@ export default function Contact() {
               <label htmlFor={id + "-newsletter"} className="pl-2">
                 Yes, subscribe me to your newsletter.
               </label>
-              <br />
-              <label htmlFor={id + "-comments"}>Equiry</label>
-              <br />
-              <textarea
-                className="p-2 mt-2 mb-4 border-black-500/50 border-2 focus:outline-none focus:border-sky-500/50  focus:ring-1 w-10/12"
-                value={formData.comments}
-                onChange={handleChange}
-                name="comments"
-                id={id + "-comments"}
-              />
+
               <br />
               <br />
               <button className=" text-xl rounded bg-darkBlue w-10/12 p-2 pt-4 pb-4 text-white hover:bg-slate-700 ">
@@ -126,13 +127,13 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        <div>
-          <p className="pt-24">
+        <div className="lg:pt-24 text-center lg:text-left pb-7 -mt-10 lg:-mt-0">
+          <p className="">
             We would be happy to discuss your needs <br />
             in person. We are located at:
           </p>
           <br />
-          <p>
+          <p className="">
             84 Nightingale Road, Edmonton, <br />
             London, N9 8PU <br />
             admin@havenflowcare.co.uk
