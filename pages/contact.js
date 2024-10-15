@@ -141,13 +141,13 @@ export default function Contact() {
         </div>
       </div>
       <div className="p-8 text-white bg-black w-full h-80 ">
-        <div className="text-5xl p-4">Join Our Team</div>
-        <div className="text-3xl font-semibold p-4">
+        <div className="text-3xl lg:text-5xl p-4">Join Our Team</div>
+        <div className="lg:text-3xl font-semibold p-4">
           We are always looking for dedicated individuals to join our broad team
           of home health care staff.
         </div>
-        <div className="text-s p-4">
-          send you cv to admin@havenflowcare.co.uk
+        <div className="text-sm lg:text-base p-4">
+          Send your cv to admin@havenflowcare.co.uk
         </div>
       </div>
     </>
