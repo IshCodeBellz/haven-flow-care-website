@@ -56,7 +56,9 @@ export default function Header() {
       </div>
 
       <div className="hidden lg:block ml-2 pt-3">
-        <div className="hidden lg:block">
+        <Link href={"/"}>
+          <div className="hidden lg:block">
+          
           <Image
             src={"/haven-flow-logo.jpg"}
             width={250}
@@ -64,6 +66,8 @@ export default function Header() {
             alt={"Logo image"}
           />
         </div>
+          </Link>
+        
         <nav className="relative flex justify-between items-center w-full px-4 pt-3 pb-10">
       
           <div className="flex-1"></div>
