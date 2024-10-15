@@ -147,7 +147,7 @@ export default function Contact() {
           of home health care staff.
         </div>
         <div className="text-sm lg:text-base p-4">
-          Send your cv to admin@havenflowcare.co.uk
+          Send your CV to admin@havenflowcare.co.uk
         </div>
       </div>
     </>
