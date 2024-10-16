@@ -19,7 +19,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ homepage, aboutUs }) {
-  console.log(homepage);
   return (
     <div>
       {homepage.map((main) => (

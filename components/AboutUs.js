@@ -21,7 +21,7 @@ export default function AboutUs({ main }) {
           supported living.
         </div>
       </div>
-      <div className="bg-white">
+      <div className="">
           <div className="pr-16 pl-16 pt-9 pb-9">
         <p>{aboutUsText}</p>
       </div>
