@@ -28,7 +28,6 @@ export async function getStaticProps() {
 }
 
 export default function About({ aboutUs, people }) {
-  console.log(aboutUs);
   return (
     <div className="bg-white">
       <div>
