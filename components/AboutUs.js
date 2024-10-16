@@ -21,7 +21,10 @@ export default function AboutUs({ main }) {
           supported living.
         </div>
       </div>
-      <div className="pr-16 pl-16 pt-9 pb-9 bg-white">{aboutUsText}</div>
+      <div className="bg-white">
+          <div className="pr-16 pl-16 pt-9 pb-9">
+        <p>{aboutUsText}</p>
+      </div>
       <div>
         <div className="flex flew-row pl-16 pr-16 items-center">
           <div className="basis-1/2 p-10 ">
@@ -75,6 +78,8 @@ export default function AboutUs({ main }) {
           </div>
         </div>
       </div>
+      </div>
+    
     </div>
   );
 }
