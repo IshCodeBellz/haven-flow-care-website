@@ -35,9 +35,11 @@ export default function About({ aboutUs, people }) {
           <AboutUs key={main.sys.id} main={main} />
         ))}
       </div>
-      <h1 className="text-3xl lg:text-4xl text-center lg:text-left py-4 lg:ml-4">Meet The Team</h1>
+      <h1 className="text-3xl lg:text-4xl text-center py-6 lg:ml-4">
+        Meet The Team
+      </h1>
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-3 pb-10 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 pb-10 gap-4 pt-6">
           {people.map((person) => (
             <Staff key={person.sys.id} person={person} />
           ))}

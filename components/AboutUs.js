@@ -16,15 +16,16 @@ export default function AboutUs({ main }) {
           className=""
         />
       </div>
-      <div className="bg-panelBlue p-8">
-        <div className="p-8 text-white sm:text-5xl text-lg">
+      <div className="bg-panelBlue p-4 lg:p-8">
+        <div className="p-4 lg:p-8 text-white md:text-3xl lg:text-5xl text-lg">
           <h1>
             <ReactMarkdown>{aboutUsPanel}</ReactMarkdown>
           </h1>
         </div>
       </div>
       <div className="">
-        <div className="pr-16 pl-16 pt-9 pb-9">
+        <div className="px-6 lg:px-16 py-9">
+          <h1 className="text-2xl md:text-3xl lg:text-5xl py-4 text-center lg:text-left">About Us</h1>
           <p>{aboutUsText}</p>
         </div>
       </div>
