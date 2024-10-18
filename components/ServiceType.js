@@ -18,7 +18,7 @@ export default function ServiceType({ serviceType }) {
         />
       </div>
       <div>
-        <h1 className="text-xl font-bold">{serviceTypeTitle}</h1>
+        <h1 className=" text-lg lg:text-xl font-bold">{serviceTypeTitle}</h1>
         <p className="w-56 lg:w-80 h-36 line-clamp-[6] lg:line-clamp-[6]">{serviceTypeDescription}</p>
         <Modal
           serviceTypeTitle={serviceTypeTitle}
