@@ -33,7 +33,7 @@ export default function About({ services, serviceType }) {
           <Services key={services.sys.id} services={services} />
         ))}
       </div>
-      <div className="pl-16 pr-16 grid grid-cols-2 ">
+      <div className="pl-16 pr-16 grid grid-cols-1 lg:grid-cols-2 ">
         {serviceType.map((serviceType) => (
           <div className="p-4 flex items-center rounded-lg shadow-lg m-4 ">
             <ServiceType key={serviceType.sys.id} serviceType={serviceType} />
