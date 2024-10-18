@@ -13,8 +13,8 @@ export default function Modal(props) {
 
   return (
     <div>
-      <button className="" onClick={() => setOpen(true)}>
-        see more
+      <button className="underline text-gray-600 py-1" onClick={() => setOpen(true)}>
+        See More
       </button>
       <Dialog open={open} onClose={setOpen} className="relative z-10">
         <DialogBackdrop
