@@ -17,7 +17,7 @@ export default function AboutUs({ main }) {
         />
       </div>
       <div className="bg-panelBlue p-8">
-        <div className="p-8 text-white text-5xl">
+        <div className="p-8 text-white sm:text-5xl text-lg">
           <h1>
             <ReactMarkdown>{aboutUsPanel}</ReactMarkdown>
           </h1>
