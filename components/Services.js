@@ -15,8 +15,8 @@ export default function AboutUs({ services }) {
           className=""
         />
       </div>
-      <div className="bg-panelBlue p-8 flex justify-center ">
-        <div className="sm:p-8 text-white sm:text-3xl w-3/4 ">
+      <div className="bg-panelBlue p-4 lg:p-8 flex justify-center ">
+        <div className="p-4 lg:p-8 text-white text-md lg:text-3xl lg:w-3/4 ">
           <h1>
             <ReactMarkdown>{servicesPanel}</ReactMarkdown>
           </h1>
