@@ -25,7 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function About({ services, serviceType }) {
+export default function services ({ services, serviceType }) {
   return (
     <div className="bg-white">
       <div>
