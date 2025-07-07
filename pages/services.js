@@ -1,6 +1,6 @@
-import Services from "@/components/Services";
+import Services from "../components/Services";
 import { createClient } from "contentful";
-import ServiceType from "@/components/ServiceType";
+import ServiceType from "../components/ServiceType";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -25,7 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function services ({ services, serviceType }) {
+export default function services({ services, serviceType }) {
   return (
     <div className="bg-white">
       <div>

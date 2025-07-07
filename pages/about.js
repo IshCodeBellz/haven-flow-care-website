@@ -1,6 +1,6 @@
-import AboutUs from "@/components/AboutUs";
+import AboutUs from "../components/AboutUs";
 import { createClient } from "contentful";
-import Staff from "@/components/Staff";
+import Staff from "../components/Staff";
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -16,12 +16,10 @@ export async function getStaticProps() {
     order: "sys.createdAt",
   });
 
-
   return {
     props: {
       aboutUs: res.items,
-      people: staff.items
-      
+      people: staff.items,
     },
     revalidate: 10,
   };

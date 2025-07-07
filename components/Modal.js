@@ -6,14 +6,17 @@ import {
   DialogTitle,
 } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
-import ServiceTypes from "@/components/ServiceType";
+import ServiceTypes from "../components/ServiceType";
 
 export default function Modal(props) {
   const [open, setOpen] = useState(false);
 
   return (
     <div>
-      <button className="underline text-gray-600 py-1" onClick={() => setOpen(true)}>
+      <button
+        className="underline text-gray-600 py-1"
+        onClick={() => setOpen(true)}
+      >
         See More
       </button>
       <Dialog open={open} onClose={setOpen} className="relative z-10">
