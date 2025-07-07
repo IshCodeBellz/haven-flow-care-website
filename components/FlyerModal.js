@@ -17,8 +17,9 @@ export default function FlyerModal() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 px-4">
-          <div className="relative bg-white rounded-xl shadow-lg p-6 w-full max-w-6xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 px-2">
+          <div className="relative bg-white rounded-xl shadow-lg p-4 w-full max-w-6xl max-h-[90vh] overflow-y-auto">
+            {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-lg font-bold"
@@ -26,13 +27,13 @@ export default function FlyerModal() {
               ✖
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              {/* Main flyer */}
+            {/* Images Section: Responsive Stack */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 items-start mt-4">
               {/* <img
                 src="/flyer.png"
                 alt="Ofsted Nanny Services Flyer"
                 className="rounded-md max-w-full max-h-[480px] object-contain"
-              /> */}
+              />  */}
               <div className="rounded-md max-w-full max-h-[480px] overflow-auto">
                 <NannyServicesFlyer />
               </div>
@@ -41,26 +42,25 @@ export default function FlyerModal() {
               <img
                 src="/flyer-info.png"
                 alt="SEND and Ofsted Info"
-                className="rounded-md max-w-full max-h-[480px] object-contain"
+                className="rounded-md w-full h-auto max-h-[400px] object-contain"
               />
             </div>
 
-            {/* Buttons */}
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-              <Link
-                href="/book-nanny"
-                className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg text-sm font-semibold"
-                // target="blank"
-              >
-                <button className="">Book a Nanny</button>
+              <Link href="/book-nanny">
+                <button className="w-full sm:w-64 bg-green-800 hover:bg-green-600 text-white rounded-lg px-6 py-3 text-sm font-semibold text-center">
+                  Book a Nanny
+                </button>
               </Link>
-              <Link
-                href="/apply-nanny"
-                // target="blank"
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-lg text-sm font-semibold"
+
+              <a
+                href="/Haven_Flow_Nanny_Application_Form_2025-06-25.pdf"
+                download
+                className="w-full sm:w-64 bg-darkBlue hover:bg-indigo-700 text-white rounded-lg px-6 py-3  text-sm font-semibold text-center"
               >
-                <button className="">Apply to Become a Nanny</button>
-              </Link>
+                Download Application Form
+              </a>
             </div>
           </div>
         </div>
