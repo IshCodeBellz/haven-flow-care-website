@@ -4,21 +4,19 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />;
 
 export default function Header() {
+  const [isOpen, setOpen] = useState(false);
 
-    const [isOpen, setOpen] = useState(false);
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
 
-    const handleIsOpen = () => {
-      setOpen(!isOpen);
-    };
+  const closeSideBar = () => {
+    setOpen(false);
+  };
 
-    const closeSideBar = () => {
-      setOpen(false);
-    };
-  
-  
   return (
     <div className="font-syne">
       <div className="flex items-center justify-between px-3 pt-3 pb-10 xl:px-10 lg:hidden">
@@ -58,21 +56,18 @@ export default function Header() {
       <div className="hidden lg:block ml-2 pt-3">
         <Link href={"/"}>
           <div className="hidden lg:block">
-          
-          <Image
-            src={"/haven-flow-logo.jpg"}
-            width={250}
-            height={300}
-            alt={"Logo image"}
-          />
-        </div>
-          </Link>
-        
+            <Image
+              src={"/haven-flow-logo.jpg"}
+              width={250}
+              height={300}
+              alt={"Logo image"}
+            />
+          </div>
+        </Link>
+
         <nav className="relative flex justify-between items-center w-full px-4 pt-3 pb-10">
-      
           <div className="flex-1"></div>
 
-   
           <div className="absolute left-1/2 transform -translate-x-1/2 text-gray-600 text-lg">
             <Link href={"/"}>Home |</Link>
             <Link href={"/about"} className="ml-3">
@@ -86,7 +81,6 @@ export default function Header() {
             </Link>
           </div>
 
-     
           <div className="flex items-center">
             <Image
               src={"/telephone-handle-silhouette.png"}

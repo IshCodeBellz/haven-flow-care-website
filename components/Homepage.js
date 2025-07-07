@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import FlyerModal from "../components/FlyerModal";
 
 export default function Homepage({ main }) {
   const {
@@ -53,6 +53,7 @@ export default function Homepage({ main }) {
         <div className="rich-text pb-5">
           <p>{homepageTextBottom}</p>
         </div>
+        <FlyerModal />
       </div>
       <div className=" bg-black h-32 text-white sm:max-2xl:p-8 p-4 grid grid-cols-6">
         <div className="md:max-2xl:text-3xl text-xl p-4 col-start-1 col-end-4">
@@ -60,7 +61,7 @@ export default function Homepage({ main }) {
         </div>
         <Link
           href="/contact"
-          target="blank"
+          // target="blank"
           className="bg-darkBlue rounded col-end-7 col-span-3 text-lg flex justify-center md:max-2xlg:text-xl"
         >
           <button className="">CAREGIVER JOBS</button>
