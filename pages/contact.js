@@ -9,22 +9,47 @@ export default function Contact() {
     comments: "",
     newsletter: true,
   });
-
+  const [status, setStatus] = React.useState("");
   const id = React.useId();
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
-    setFormData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [name]: type === "checkbox" ? checked : value,
-      };
-    });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(formData);
+    const data = new FormData();
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnnvkjwk", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      });
+
+      if (response.ok) {
+        setStatus("Thank you! Your message has been sent.");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phonenumber: "",
+          comments: "",
+          newsletter: true,
+        });
+      } else {
+        setStatus("Oops! Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setStatus("Network error. Please try again later.");
+    }
   }
 
   return (
@@ -90,7 +115,7 @@ export default function Contact() {
               <br />
               <input
                 className="p-2 mt-2 mb-4 border-black-500/50 border-2 focus:outline-none focus:border-sky-500/50  focus:ring-1 w-10/12"
-                type="phonenumber"
+                type="tel"
                 onChange={handleChange}
                 name="phonenumber"
                 value={formData.phonenumber}
@@ -118,12 +143,14 @@ export default function Contact() {
               <label htmlFor={id + "-newsletter"} className="pl-2">
                 Yes, subscribe me to your newsletter.
               </label>
-
               <br />
               <br />
               <button className=" text-xl rounded bg-darkBlue w-10/12 p-2 pt-4 pb-4 text-white hover:bg-slate-700 ">
                 Submit
               </button>
+              {status && (
+                <p className="text-sm text-green-700 mt-2">{status}</p>
+              )}
             </form>
           </div>
         </div>

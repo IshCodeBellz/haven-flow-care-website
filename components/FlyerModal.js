@@ -11,9 +11,9 @@ export default function FlyerModal() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-darkBlue text-white px-4 py-2 rounded-lg shadow-md hover:darkBlue-700"
+        className="bg-darkBlue hover:bg-indigo-800 text-white text-xl py-6 px-20 rounded-md w-full sm:w-[500px] flex justify-center"
       >
-        View Ofsted Nanny Services Flyer
+        Ofsted Nanny Services
       </button>
 
       {isOpen && (

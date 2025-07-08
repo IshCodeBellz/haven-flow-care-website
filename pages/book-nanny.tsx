@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function BookNannyPage() {
   const [form, setForm] = useState({
@@ -10,6 +9,7 @@ export default function BookNannyPage() {
     phone: "",
     message: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -17,10 +17,33 @@ export default function BookNannyPage() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Booking request submitted!");
-    // You could POST this to an API route or email service.
+
+    const formData = new FormData();
+    formData.append("fullName", form.fullName);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone);
+    formData.append("message", form.message);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mwpbdvay", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setStatus("Booking request submitted successfully!");
+        setForm({ fullName: "", email: "", phone: "", message: "" });
+      } else {
+        setStatus("There was an error submitting your request.");
+      }
+    } catch (error) {
+      setStatus("Network error. Please try again later.");
+    }
   };
 
   return (
@@ -79,6 +102,10 @@ export default function BookNannyPage() {
         >
           Submit Booking Request
         </button>
+
+        {status && (
+          <p className="text-center text-sm text-green-700 mt-2">{status}</p>
+        )}
       </form>
     </div>
   );
