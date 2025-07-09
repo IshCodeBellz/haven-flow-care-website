@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import FlyerModal from "../components/FlyerModal";
+import CookieConsent from "react-cookie-consent";
 
 export default function Homepage({ main }) {
   const {
@@ -81,6 +82,27 @@ export default function Homepage({ main }) {
           <button className="">CAREGIVER JOBS</button>
         </Link>
       </div>
+      <CookieConsent
+        location="bottom"
+        buttonText="I understand"
+        style={{
+          background: "#5C7E9B",
+          color: "#fff",
+        }}
+        buttonStyle={{
+          color: "#000",
+          background: "#EED3D7",
+          fontSize: "13px",
+          borderRadius: "5px",
+          padding: "10px 20px",
+        }}
+        expires={150}
+      >
+        This website uses cookies to enhance the user experience.{" "}
+        <a href="/privacy" style={{ color: "#DAAAB2" }}>
+          Learn more
+        </a>
+      </CookieConsent>
     </div>
   );
 }
