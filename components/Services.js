@@ -1,11 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import SEOHead from "./SEOHead";
 
 export default function AboutUs({ services }) {
   const { servicesHero, servicesPanel } = services.fields;
   return (
     <div>
+      <SEOHead
+        title="Our Services | Ofsted Nanny, SEND Support & Care | Haven Flow"
+        description="Discover Haven Flow’s range of services including Ofsted-registered nanny placements, SEND childcare support, and family-centered care across London."
+        url="https://www.havenflow.co.uk/services"
+        image={`https:${servicesHero.fields.file.url}`}
+      />
+
       <div className="">
         <Image
           src={`https:${servicesHero.fields.file.url}`}

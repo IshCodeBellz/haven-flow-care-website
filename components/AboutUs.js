@@ -2,11 +2,19 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import SEOHead from "./SEOHead";
 
 export default function AboutUs({ main }) {
   const { aboutHero, aboutUsPanel, aboutUsText } = main.fields;
   return (
     <div>
+      <SEOHead
+        title="About Haven Flow | Compassionate Care & Child Services"
+        description="Meet the team behind Haven Flow. We're dedicated to delivering trusted, quality care and childcare services across London."
+        url="https://www.havenflow.co.uk/about"
+        image={`https:${aboutHero.fields.file.url}`}
+      />
+
       <div className="">
         <Image
           src={`https:${aboutHero.fields.file.url}`}
@@ -25,7 +33,9 @@ export default function AboutUs({ main }) {
       </div>
       <div className="">
         <div className="px-6 lg:px-16 py-9">
-          <h1 className="text-2xl md:text-3xl lg:text-5xl py-4 text-center lg:text-left">About Us</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-5xl py-4 text-center lg:text-left">
+            About Us
+          </h1>
           <p>{aboutUsText}</p>
         </div>
       </div>

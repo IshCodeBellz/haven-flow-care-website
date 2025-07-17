@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FlyerModal from "../components/FlyerModal";
 import CookieConsent from "react-cookie-consent";
+import SEOHead from "./SEOHead";
 
 export default function Homepage({ main }) {
   const {
@@ -17,6 +18,35 @@ export default function Homepage({ main }) {
   } = main.fields;
   return (
     <div className="bg-white font-syne text-lightBlack">
+      <head><script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Haven Flow",
+      "url": "https://www.havenflow.co.uk",
+      "logo": "https://www.havenflow.co.uk/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44 7904333304",
+        "contactType": "Customer Service"
+      },
+      "sameAs": [
+        "https://www.instagram.com/havenflowcare",
+        "https://www.facebook.com/havenflowcare"
+      ]
+    })
+  }}
+/>
+</head>
+      <SEOHead
+        title="Haven Flow Care | Ofsted Nanny & Support Services in London"
+        description="Trusted Ofsted-registered nanny services and tailored care support. Helping families and individuals across London thrive with SEND-friendly care."
+        url="https://www.havenflow.co.uk"
+        image={`https:${homepageHero.fields.file.url}`}
+      />
+
       <div className="relative">
         <div className="">
           <Image
@@ -50,18 +80,6 @@ export default function Homepage({ main }) {
           <h2 className="text-4xl">{servicesHeader}</h2>
           <p className="text-lg lg:text-xl pt-2">{servicesSubtitle}</p>
         </div>
-        {/* <div className=" bg-black h-32 text-white sm:max-2xl:p-8 p-4 grid grid-cols-6 rounded-lg">
-          <div className="md:max-2xl:text-3xl text-xl p-4 col-start-1 col-end-4">
-            Better Care Starts with You!
-          </div>
-          <Link
-            href="/contact"
-            // target="blank"
-            className="bg-darkBlue rounded col-end-7 col-span-3 text-lg flex justify-center md:max-2xlg:text-xl"
-          >
-            <button className="">NANNY JOBS</button>
-          </Link>
-        </div> */}
         <br />
         <div className="rich-text pb-5">
           <p>{homepageTextBottom}</p>
