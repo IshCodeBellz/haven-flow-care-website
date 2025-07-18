@@ -119,9 +119,12 @@ export default function Homepage({ main }) {
           expires={150}
         >
           This website uses cookies to enhance the user experience.{" "}
-          <a href="/privacy" style={{ color: "#DAAAB2" }}>
+          {/* <a href="/privacy" style={{ color: "#DAAAB2" }}>
             Learn more
-          </a>
+          </a> */}
+          <Link href="/privacy" style={{ color: "#DAAAB2" }}>
+            Learn more
+          </Link>
         </CookieConsent>
       </div>
     </>

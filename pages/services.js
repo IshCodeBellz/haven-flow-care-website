@@ -29,14 +29,15 @@ export default function services({ services, serviceType }) {
   return (
     <div className="bg-white">
       <div>
-        {services.map((services) => (
-          <Services key={services.sys.id} services={services} />
+        {services.map((service) => (
+          <Services key={service.sys.id} services={service} />
         ))}
       </div>
-      <div className="lg:px-16 grid grid-cols-1 md:grid-cols-2 ">
-        {serviceType.map((serviceType) => (
-          <div className="p-4 rounded-lg shadow-lg m-4 ">
-            <ServiceType key={serviceType.sys.id} serviceType={serviceType} />
+
+      <div className="lg:px-16 grid grid-cols-1 md:grid-cols-2">
+        {serviceType.map((type) => (
+          <div key={type.sys.id} className="p-4 rounded-lg shadow-lg m-4">
+            <ServiceType serviceType={type} />
           </div>
         ))}
       </div>

@@ -1,21 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />;
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
 
-  const handleIsOpen = () => {
-    setOpen(!isOpen);
-  };
-
-  const closeSideBar = () => {
-    setOpen(false);
-  };
+  const handleIsOpen = () => setOpen(!isOpen);
+  const closeSideBar = () => setOpen(false);
 
   return (
     <div className="font-syne">

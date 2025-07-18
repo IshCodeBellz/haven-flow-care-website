@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import NannyServicesFlyer from "../pages/NannyServicesFlyer";
+import Image from "next/image";
 
 export default function FlyerModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,18 +30,20 @@ export default function FlyerModal() {
 
             {/* Images Section: Responsive Stack */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4 items-start mt-4">
-              {/* <img
-                src="/flyer.png"
-                alt="Ofsted Nanny Services Flyer"
-                className="rounded-md max-w-full max-h-[480px] object-contain"
-              />  */}
               <div className="rounded-md max-w-full max-h-[480px] overflow-auto">
                 <NannyServicesFlyer />
               </div>
 
               {/* Side Info image */}
-              <img
+              {/* <img
                 src="/flyer-info.png"
+                alt="SEND and Ofsted Info"
+                className="rounded-md w-full h-auto max-h-[400px] object-contain"
+              /> */}
+              <Image
+                src="/flyer-info.png"
+                width={500}
+                height={700}
                 alt="SEND and Ofsted Info"
                 className="rounded-md w-full h-auto max-h-[400px] object-contain"
               />
