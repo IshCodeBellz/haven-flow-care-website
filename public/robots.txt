@@ -1,9 +1,3 @@
-# *
 User-agent: *
 Allow: /
-
-# Host
-Host: https://www.havenflow.co.uk
-
-# Sitemaps
 Sitemap: https://www.havenflow.co.uk/sitemap.xml

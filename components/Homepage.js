@@ -5,6 +5,7 @@ import FlyerModal from "../components/FlyerModal";
 import CookieConsent from "react-cookie-consent";
 import SEOHead from "./SEOHead";
 import Head from "next/head";
+import schema from "../public/json-ld-schema.json";
 
 export default function Homepage({ main }) {
   const {
@@ -22,24 +23,7 @@ export default function Homepage({ main }) {
       <Head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Haven Flow",
-              url: "https://www.havenflow.co.uk",
-              logo: "https://www.havenflow.co.uk/logo.png",
-              contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+44 7904333304",
-                contactType: "Customer Service",
-              },
-              sameAs: [
-                "https://www.instagram.com/havenflowcare",
-                "https://www.facebook.com/havenflowcare",
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
       <SEOHead
