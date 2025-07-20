@@ -10,6 +10,21 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        has: [
+          {
+            type: "host",
+            value: "havenflow.co.uk",
+          },
+        ],
+        destination: "https://www.havenflow.co.uk",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
