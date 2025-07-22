@@ -24,7 +24,7 @@ export default function CaregiverApplicationPage() {
     Object.entries(form).forEach(([key, value]) => formData.append(key, value));
 
     try {
-      const response = await fetch("https://formspree.io/f/mwkgykkg", {
+      const response = await fetch("https://formspree.io/f/meozaqep", {
         method: "POST",
         headers: {
           Accept: "application/json",

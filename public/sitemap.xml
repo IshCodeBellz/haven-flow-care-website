@@ -18,12 +18,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- <url>
-    <loc>https://www.havenflow.co.uk/nanny-services</loc>
+  <url>
+    <loc>https://www.havenflow.co.uk/ofsted-nanny</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> -->
+  </url>
   <!-- <url>
     <loc>https://www.havenflow.co.uk/send-support</loc>
     <lastmod>2025-07-20</lastmod>
@@ -36,10 +36,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- <url>
-    <loc>https://www.havenflow.co.uk/apply</loc>
+  <url>
+    <loc>https://www.havenflow.co.uk/caregiver-application</loc>
     <lastmod>2025-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> -->
+  </url>
 </urlset>
