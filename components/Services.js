@@ -11,7 +11,7 @@ export default function AboutUs({ services }) {
         title="Our Services | Ofsted Nanny, SEND Support & Care | Haven Flow"
         description="Discover Haven Flow’s range of services including Ofsted-registered nanny placements, SEND childcare support, and family-centered care across London."
         url="https://www.havenflow.co.uk/services"
-        image={`https:${servicesHero.fields.file.url}`}
+        image={undefined}
       />
       <div>
         <div className="">

@@ -43,6 +43,9 @@ export default function Header() {
             <Link href={"/contact"} onClick={closeSideBar}>
               Contact Us
             </Link>
+            <Link href={"/ofsted-nanny"} onClick={closeSideBar}>
+              Ofsted Nanny
+            </Link>
           </Menu>
         </div>
       </div>
@@ -71,7 +74,10 @@ export default function Header() {
               Services |
             </Link>
             <Link href={"/contact"} className="ml-3">
-              Contact Us
+              Contact Us |
+            </Link>
+            <Link href={"/ofsted-nanny"} className="ml-3">
+              Ofsted Nanny
             </Link>
           </div>
 

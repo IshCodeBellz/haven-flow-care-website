@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import NannyServicesFlyer from "../pages/NannyServicesFlyer";
+import NannyServicesFlyer from "../pages/ofsted-nanny";
 import Image from "next/image";
 
 export default function FlyerModal() {

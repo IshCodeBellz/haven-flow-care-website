@@ -20,18 +20,18 @@ export default function Homepage({ main }) {
   } = main.fields;
   return (
     <>
+      <SEOHead
+        title="Haven Flow Care | Ofsted Nanny & Support Services in London"
+        description="Trusted Ofsted-registered nanny services and tailored care support. Helping families and individuals across London thrive with SEND-friendly care."
+        url="https://www.havenflow.co.uk"
+        image={undefined}
+      />
       <Head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
-      <SEOHead
-        title="Haven Flow Care | Ofsted Nanny & Support Services in London"
-        description="Trusted Ofsted-registered nanny services and tailored care support. Helping families and individuals across London thrive with SEND-friendly care."
-        url="https://www.havenflow.co.uk"
-        image={`https:${homepageHero.fields.file.url}`}
-      />
       <div className="bg-white font-syne text-lightBlack">
         <div className="relative">
           <div className="">
@@ -79,7 +79,7 @@ export default function Homepage({ main }) {
             Better Care Starts with You!
           </div>
           <Link
-            href="/contact"
+            href="/caregiver-application"
             // target="blank"
             className="bg-darkBlue rounded col-end-7 col-span-3 text-lg flex justify-center md:max-2xlg:text-xl"
           >

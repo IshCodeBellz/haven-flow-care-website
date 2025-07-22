@@ -59,7 +59,7 @@ export default function Contact() {
         title="Contact Haven Flow | Enquiries & Support"
         description="Get in touch with Haven Flow for care and nanny services in London. Call, email, or submit an enquiry form today."
         url="https://www.havenflow.co.uk/contact"
-        image="https://www.havenflow.co.uk/images/contact-og.jpg"
+        image={undefined}
       />
       <div className="relative w-full h-36 lg:h-48 bg-panelBlue">
         <div className="absolute inset-0 flex items-center justify-center ">
